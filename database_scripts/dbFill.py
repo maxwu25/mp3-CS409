@@ -98,8 +98,12 @@ def main(argv):
         userEmails.append(str(d['data']['email']))
 
     # Open 'tasks.txt' for sample task names
-    f = open('tasks.txt','r')
+    #f = open('tasks.txt','r')
+    #taskNames = f.read().splitlines()
+    f = open('tasks.txt', 'r', encoding='utf-8')
     taskNames = f.read().splitlines()
+    f.close()
+
 
     # Loop 'taskCount' number of times
     for i in range(taskCount):
